@@ -1,0 +1,203 @@
+Go em produção para APIs e microservices
+
+Vinicius Feitosa Pacheco 
+@ViniciusPach
+contato@viniciusfeitosa.com.br
+http://about.me/viniciusfeitosa
+https://github.com/viniciusfeitosa
+
+* @ViniciusPach
+
+.image images/eu.jpg _ 350
+
+Engenheiro de Software na globo.com
+Instrutor na Caelum 
+Teologo de formação
+contato@viniciusfeitosa.com.br
+
+* Quer trabalhar conosco na Globo.com?
+
+.link https://talentos.globo.com
+
+* Métricas e Caminho globo.com
+
+- Mais de 50 milhões de acesso diários
+- Votações com mais de 4k/req por segundo
+- Aplicações que podem gerar 300k/req por segundo
+- Inclinação para BigData
+- Captura de informação mais fácil do usuário logado
+
+* Onde eu me encaixo nesses números?
+
+* GloboID
+
+- Captação e gerenciamento de todos os usuários da globo.com
+- Autenticação e autorização de cada usuário
+- Fornece informações de usuários para cada time da globo.com
+- Atende a outras empresas do grupo globo
+
+* Ecossistema da API de Cadastro do GloboID.
+
+.image images/old_api.png _ 880 
+
+* Monolitos, o que são?
+
+* Monolitos
+
+.image images/monolito1.png _ 560 
+
+* Monolitos
+
+.image images/monolito2.png _ 540 
+
+* Status API de Cadastro GloboID
+
+- Cadastra 200 usuários por segundo
+- 2 grandes sistemas monolíticos
+- Bibliotecas antigas e difíceis de atualizar
+- Alto risco no deploy
+- Merges numerosos e perigosos
+
+* Vamos mudar para uma nova arquitetura.
+
+* Microservices
+
+    "Microservice não está ligado ao tamanho da aplicação, mas ao tamanho do Negócio."
+                                                                            Mario Fusco
+
+* Kratos x Golun 
+
+.image images/kratos_x_golun.png _ 900
+
+* No que o Go nos atende melhor
+
+- Simplicidade de código
+- Biblioteca nativa completa
+- Linguagem mais próximo da máquina (Compilada)
+- Linguagem de alta performance
+- Simplicidade para programação concorrente
+- Muitas libs e ferramentas disponíveis
+- HTTPS e HTTP2 nativo
+- Ótima documentação
+
+* Simplicidade 
+
+* Undertow
+
+    public class HelloWorldServer {
+        public static void main(final String[] args) {
+            Undertow server = Undertow.builder()
+                    .addHttpListener(8080, "localhost")
+                    .setHandler(new HttpHandler() {
+                        @Override
+                        public void handleRequest(final HttpServerExchange exchange) throws Exception{
+                            exchange.getResponseHeaders().put(Headers.CONTENT_TYPE, "text/plain");
+                            exchange.getResponseSender().send("Hello World");
+                        }
+                    }).build();
+            server.start();
+        }
+    }
+
+* Go
+
+.play code/handler.go
+
+* Go Testes
+
+.play code/handler_test.go
+
+* Go JSON
+
+.play code/binding_json.go
+
+* Concorrencia
+
+.play code/goroutines.go
+
+* Concorrencia (pattern)
+
+.play code/goroutines_pattern.go
+
+* Performance (testes)
+
+* Glive
+
+* Pattern de um Microservice Glive
+
+.image images/glive.png _ 830 
+
+* O que estamos usando no Glive
+
+- Muxer Pat - https://github.com/bmizerany/pat
+- Negroni - https://github.com/codegangsta/negroni
+- Redigo - https://github.com/garyburd/redigo
+- mgo - https://labix.org/mgo
+- ampq - https://github.com/streadway/amqp
+- godep - https://github.com/tools/godep
+- Testify - https://github.com/stretchr/testify
+- govalidator - https://github.com/asaskevich/govalidator
+- gotains - https://github.com/viniciusfeitosa/gotains
+
+* Vendor
+
+    {
+        "ImportPath": "gitlab.globoi.com/globoid/glive",
+        "GoVersion": "go1.6",
+        "Deps": [
+            {
+                "ImportPath": "github.com/asaskevich/govalidator",
+                "Comment": "v2-51-g9699ab6",
+                "Rev": "9699ab6b38bee2e02cd3fe8b99ecf67665395c96"
+            },
+            {
+                "ImportPath": "github.com/bmizerany/pat",
+                "Rev": "b8a35001b773c267eb260a691f4e5499a3531600"
+            },
+            {
+                "ImportPath": "github.com/codegangsta/negroni",
+                "Comment": "v0.1-70-gc7477ad",
+                "Rev": "c7477ad8e330bef55bf1ebe300cf8aa67c492d1b"
+            }
+        ]
+    }
+
+* Testify
+
+.play code/cache.go
+
+* Testify
+
+.play code/cache_test.go
+
+* Nós Usamos Go 1.6
+
+* Status da API de Cadastro do GloboID com GLIVE
+
+- Cadastra 19k usuários por segundo
+- Pool de microservices
+- Muita biblioteca nativa do Go e libs fáceis de mudar
+- Deploy fácil e com cache para tempo de intermitência
+- Merges distribuídos e mais simples
+
+* Mas e o Legado?
+
+.image images/legado.png _ 860
+
+* Quero fazer APIs usando Go, por onde começar?
+
+* Workshop
+
+    Criando APIs e microservices de alta performance com Go
+
+Dia 1 de abril 9:15
+
+* Onde posso continuar estudando?
+
+.link http://www.casadocodigo.com.br/products/livro-google-go
+.link https://golang.org/doc/effective_go.html
+.link http://tour.golang.org/#1
+.link https://gobyexample.com/
+.link https://groups.google.com/forum/#!forum/golang-brasil 
+
+* Dúvidas?
