@@ -17,7 +17,7 @@ func GetLogger(config *Config) *logging.Logger {
 		logBackend.Color = true
 	}
 	// Setup syslog backend
-	syslogBackend, err := logging.NewSyslogBackend("glive-consumer: ")
+	syslogBackend, err := logging.NewSyslogBackend("qconsp: ")
 	if err != nil {
 		l.Fatal(err)
 	}
