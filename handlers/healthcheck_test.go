@@ -6,6 +6,7 @@ import (
 	"github.com/golang/mock/gomock"
 	"github.com/op/go-logging"
 	testifyMock "github.com/stretchr/testify/mock"
+	redis "github.com/viniciusfeitosa/QConSP2016/cache/mock"
 	"github.com/viniciusfeitosa/QConSP2016/env_configs"
 )
 
@@ -27,4 +28,10 @@ func setup(t *testing.T) {
 	redisMock = redis.NewMockConn(mock)
 	confMock = &configs.Config{Debug: true}
 	logMock = configs.GetLogger(confMock)
+}
+
+func TestHealthCheckHandlerOK(t *testing.T) {
+	setup(t)
+	redisMock.EXPECT().Close()
+	redisMock.EXPECT().Do("PING").Return(nil, nil).Times(1)
 }
