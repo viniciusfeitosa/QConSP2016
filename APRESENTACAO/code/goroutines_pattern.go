@@ -13,9 +13,9 @@ func main() {
 	log := configs.GetLogger(conf)
 	redisPool := redis.NewPool(conf)
 
-	// Código omitido
+	// omitted code
 	go runLogEvents(log, conf, redisPool)
-	// Código omitido
+	// omitted code
 }
 
 func runLogEvents(log *logging.Logger, config *configs.Config, redisPool redis.Pool) {
@@ -44,6 +44,6 @@ type LogEvents struct {
 
 func (l *LogEvents) process(id int) {
 	for {
-		// Código omitido
+		// omitted code
 	}
 }
