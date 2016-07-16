@@ -42,7 +42,7 @@ contato@viniciusfeitosa.com.br
 
 * Ecosystem Globoid, the Registry API.
 
-.image images/old_api.png _ 880 
+.image images/old_api_en.png _ 880 
 
 * Monoliths, what are they?
 
@@ -130,7 +130,7 @@ contato@viniciusfeitosa.com.br
 
 * A pattern Glive microservice
 
-.image images/glive.png _ 830 
+.image images/glive_en.png _ 830 
 
 * What we are using in Glive
 
@@ -189,7 +189,7 @@ contato@viniciusfeitosa.com.br
 
 * What we do with the legacy?
 
-.image images/legado.png _ 860
+.image images/legado_en.png _ 860
 
 * I want to APIs using Go, where to start?
 
