@@ -28,7 +28,6 @@ contato@viniciusfeitosa.com.br
 - Quiz app with 4k/req per second
 - Applications can generate 300k/req per second
 - Recomendation and inteligence with BigData
-- Captura de informação mais fácil do usuário logado
 - Get user information is easier with logged users
 
 * Where am I between this numbers?
@@ -38,9 +37,9 @@ contato@viniciusfeitosa.com.br
 - Capture and management of all users globo.com
 - Authentication and authorization of each user
 - It provides user information for each team globo.com
-- Meets other companies globe group
+- Meets other companies Globo group
 
-* Ecosystem Globoid, the Registry API.
+* Ecosystem GloboID, the Registry API.
 
 .image images/old_api_en.png _ 880 
 
@@ -54,10 +53,10 @@ contato@viniciusfeitosa.com.br
 
 .image images/monolito2.png _ 540 
 
-* GlobaID Status Register API
+* GloboID Status Register API
 
 - Register 200 users per second
-- 2 large monolithic systems
+- Two large monolithic systems
 - Old and difficult Library update
 - High risk to deploy
 - Merges numerous and dangerous
@@ -78,8 +77,8 @@ contato@viniciusfeitosa.com.br
 
 - Simplicity code
 - Complete standard library
-- Nearest Language machine (Compiled)
-- High performance Language
+- Nearest machine language (Compiled)
+- High performance 
 - Simplicity for concurrent programming
 - Many libs and tools available
 - Native HTTPS and HTTP2
@@ -181,7 +180,7 @@ contato@viniciusfeitosa.com.br
 
 * GlobaID Status Register API with Glive
 
-- Enroll users 19k per second
+- Enroll users 24k per second
 - Pool microservices
 - Many standard library
 - Easy to Deploy
