@@ -107,7 +107,7 @@ contato@viniciusfeitosa.com.br
 
 .play code/handler.go
 
-* Go Testes
+* Go Tests
 
 .play code/handler_test.go
 
@@ -137,7 +137,7 @@ contato@viniciusfeitosa.com.br
 - Negroni - https://github.com/codegangsta/negroni
 - Redigo - https://github.com/garyburd/redigo
 - mgo - https://labix.org/mgo
-- ampq - https://github.com/streadway/amqp
+- amqp - https://github.com/streadway/amqp
 - godep - https://github.com/tools/godep
 - Testify - https://github.com/stretchr/testify
 - govalidator - https://github.com/asaskevich/govalidator
