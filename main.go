@@ -12,7 +12,7 @@ import (
 	"github.com/viniciusfeitosa/QConSP2016/env_configs"
 	"github.com/viniciusfeitosa/QConSP2016/handlers"
 	"github.com/viniciusfeitosa/QConSP2016/mongo"
-	"github.com/viniciusfeitosa/poc/workers"
+	"github.com/viniciusfeitosa/QConSP2016/workers"
 )
 
 func main() {

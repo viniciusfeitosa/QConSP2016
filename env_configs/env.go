@@ -75,9 +75,9 @@ func LoadConfig() *Config {
 
 	fs.Usage = printUsage
 	fs.Parse(os.Args[1:])
-	if fs.NArg() != 1 {
-		printErrorUsageAndExitWithCode("Wrong or missing arguments", 1)
-	}
+	// if fs.NArg() != 1 {
+	// 	printErrorUsageAndExitWithCode("Wrong or missing arguments", 1)
+	// }
 
 	gcfg, err := globalconf.NewWithOptions(&globalconf.Options{Filename: fs.Arg(0), EnvPrefix: "QCONSP_"})
 	if err != nil {
